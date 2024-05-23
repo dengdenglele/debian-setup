@@ -1,37 +1,106 @@
-# debian-setup
+# Debian minimal setup
+
 How to setup a minimal debian installation without bloat
 
+# During graphical installation process
 
+- Skip network configuration
+- "No" to everything
+- Do not install anything additionally
 
-## Setup [SourcesList](https://wiki.debian.org/SourcesList#Example_sources.list)
+# [TTY environment](https://askubuntu.com/questions/66195/what-is-a-tty-and-how-do-i-access-a-tty)
+
+## [Configure a Device Dynamically with DHCP](https://www.cyberciti.biz/faq/howto-configuring-network-interface-cards-on-debian/)
+
+Get the name of your network interface and write down its name:
+
+```bash
+ip address
+```
+
+Open the /etc/network/interfaces file as the root user:
+
+```bash
+sudo nano /etc/network/interfaces
+```
+
+Add the following lines to /etc/network/interfaces , replace \<networkInterface\> with respective name, save the file:
+
+```bash
+auto <networkInterface>
+iface <networkInterface> inet dhcp
+```
+
+Start the interface:
+
+```bash
+ifup <networkInterface>
+```
+
+## [Setup apt SourcesList](https://wiki.debian.org/SourcesList#Example_sources.list)
+
 Edit the sources.list file:
 
 ```bash
 sudo nano /etc/apt/sources.list
 ```
-
-add the following lines:
+Add the following lines:
 
 ```bash
 deb http://deb.debian.org/debian bookworm main non-free-firmware
-deb-src http://deb.debian.org/debian bookworm main non-free-firmware
-
 deb http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
-deb-src http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
-
 deb http://deb.debian.org/debian bookworm-updates main non-free-firmware
-deb-src http://deb.debian.org/debian bookworm-updates main non-free-firmware
 ```
 
-## Install [GNOME minimal](https://wiki.debian.org/Gnome) version
+Update and upgrade packages:
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+## [Install GNOME core (minimal setup)](https://wiki.debian.org/Gnome)
 
 ```bash
 sudo apt install gnome-core
+sudo reboot
+```
+# GNOME Desktop environment
+
+## [Remove interfaces file and let GNOME handle network settings](https://www.reddit.com/r/debian/comments/162gpdg/debian_12_minimal_install_no_network_card_in_gnome/)
+
+```bash
+sudo rm /etc/network/interfaces
+sudo reboot
+```
+
+## [Fix missing time synchronization service](https://manpages.debian.org/unstable/systemd-timesyncd/systemd-timesyncd.service.8.en.html)
+
+```bash
+sudo apt install systemd-timesyncd
 ```
 
 ## Remove unnecessary packages
 
 ```bash
-sudo apt remove yelp totem gnome-software -y
+sudo apt remove yelp totem gnome-software gnome-characters gnome-contacts firefox-esr -y
 ```
 
+## Check "Software & Updates" App if sources are missing e.g. contrib, non-free ...
+
+## Use "Settings" App to configure GNOME
+
+- Mouse & Touchpad
+  - Disable "Natural Scrolling"
+  - Enable "Tap to Click"
+- Power
+  - Turn of "Automatic Suspend"
+  - Set "Power Button Behavior" to "Nothing"
+  - Enable "Show Battery Percentage"
+- Date & Time
+  - Select correct "Time Zone"
+  - Check if "Automatic Date & Time" is available and enabled
+- Accessibility
+  - Enable "Large Text"
+  - Increase "Cursor Size" e.g. "Large"
+  - In "Repeat Keys": decrease "Delay", increase "Speed"
+  - Enable "Locate Pointer" (not visible/weak effect, when "Enable animations" is disabled)
