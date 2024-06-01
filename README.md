@@ -89,44 +89,7 @@ sudo apt install systemd-timesyncd
 sudo apt remove yelp totem gnome-software gnome-characters gnome-contacts firefox-esr -y
 ```
 
-## Check "Software & Updates" App if sources are missing e.g. contrib, non-free ...
 
-Append additional sources the sources.list file
-
-## Use "Settings" App to configure GNOME
-
-- Mouse & Touchpad
-  - Disable "Natural Scrolling"
-  - Enable "Tap to Click"
-- Multitasking
-  - Disable "Hot Corner"
-  - Disable "Active Screen Edges"
-  - Set "Fixed number of workspaces" to 4
-- Power
-  - Turn of "Automatic Suspend"
-  - Set "Power Button Behavior" to "Nothing"
-  - Enable "Show Battery Percentage"
-- Date & Time
-  - Select correct "Time Zone"
-  - Check if "Automatic Date & Time" is available and enabled
-- Accessibility
-  - Enable "Large Text"
-  - Increase "Cursor Size" e.g. "Large"
-  - In "Repeat Keys": decrease "Delay", increase "Speed"
-  - Enable "Locate Pointer" (not visible/weak effect, when "Enable animations" is disabled)
-- Keyboard
-  - Launcher
-    - Super+E < "Home folder"
-    - Super+C < "Launch calculator"
-    - Super+B < "Launch email client"
-    - Disabled < "Launch help browser"
-    - Super+F < "Launch web browser"
-  - Navigation
-    - Super+D < "Hide all normal windows"
-    - Super+Tab < "Switch applications"
-    - Alt+Tab < "Switch windows"
-  - Custom Shortcuts
-    - Ctrl+Alt+T < gnome-terminal
 
 ## More advanced stuff
 
@@ -184,15 +147,3 @@ sudo nano /etc/tlp.conf
 flatpak install flathub com.github.d4nj1.tlpui
 ```
 
-### gnome-tweaks
-
-Install "gnome-tweaks" to get access to additional GNOME settings not available in "Settings" app
-
-```bash
-sudo apt install gnome-tweaks
-```
-
-- General > Turn off "Suspend when laptop lid is closed"
-- Fonts > Increase "Scaling Factor" if necessary
-- Keyboard & Mouse > Set "Acceleration Profile" to "Flat".
-- Keyboard & Mouse > In "Additional Layout Options" > "Caps Lock behavior" select "Make Caps Lock an additional Esc, but Shift + Caps Lock is the regular Caps Lock"
