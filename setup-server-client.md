@@ -21,4 +21,6 @@ Setup firewall
 ```bash
 $ sudo apt install ufw
 $ sudo ufw enable
+# enable port 22, otherwise SSH does not work
+$ sudo ufw allow 22
 ```
