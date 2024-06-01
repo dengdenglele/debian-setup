@@ -98,6 +98,10 @@ Append additional sources the sources.list file
 - Mouse & Touchpad
   - Disable "Natural Scrolling"
   - Enable "Tap to Click"
+- Multitasking
+  - Disable "Hot Corner"
+  - Disable "Active Screen Edges"
+  - Set "Fixed number of workspaces" to 4
 - Power
   - Turn of "Automatic Suspend"
   - Set "Power Button Behavior" to "Nothing"
