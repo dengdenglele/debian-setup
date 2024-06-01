@@ -17,3 +17,8 @@ $ sudo passwd -S root
 # Undesired output: if "P" after root, then root is enabled!!!
 root L yyyy-mm-dd 99999 7 -1
 ```
+Setup firewall
+```bash
+$ sudo apt install ufw
+$ sudo ufw enable
+```
