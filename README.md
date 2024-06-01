@@ -121,7 +121,8 @@ Append additional sources the sources.list file
     - Super+D < "Hide all normal windows"
     - Super+Tab < "Switch applications"
     - Alt+Tab < "Switch windows"
-
+  - Custom Shortcuts
+    - Ctrl+Alt+T < gnome-terminal
 
 ## More advanced stuff
 
@@ -166,6 +167,19 @@ sudo update-grub
 
 ### [Undervolt Intel Core CPUs until 9th Generation](https://cryptosingh1337.medium.com/how-to-under-volt-intel-i-series-cpu-in-ubuntu-abc9283f4760)
 
+### [TLP Optimizing Guide](https://linrunner.de/tlp/support/optimizing.html)
+
+```bash
+sudo apt install tlp
+sudo tlp start
+
+# edit settings in
+sudo nano /etc/tlp.conf
+
+# nice GUI for beginners
+flatpak install flathub com.github.d4nj1.tlpui
+```
+
 ### gnome-tweaks
 
 Install "gnome-tweaks" to get access to additional GNOME settings not available in "Settings" app
@@ -176,4 +190,5 @@ sudo apt install gnome-tweaks
 
 - General > Turn off "Suspend when laptop lid is closed"
 - Fonts > Increase "Scaling Factor" if necessary
-- Keyboard & Mouse > Set "Acceleration Profile" to "Flat". In "Additional Layout Options" > "Caps Lock behavior" select "Make Caps Lock an additional Esc, but Shift + Caps Lock is the regular Caps Lock"
+- Keyboard & Mouse > Set "Acceleration Profile" to "Flat".
+- Keyboard & Mouse > In "Additional Layout Options" > "Caps Lock behavior" select "Make Caps Lock an additional Esc, but Shift + Caps Lock is the regular Caps Lock"
