@@ -130,6 +130,27 @@ sudo update-grub
 
 ### visudo
 
+```bash
+$ sudo visudo
+
+# at the bottom of the file add following line to enable non sudo users to update and upgrade system
+username ALL = NOPASSWD: /usr/bin/apt update
+username ALL = NOPASSWD: /usr/bin/apt upgrade -y
+
+# commands must be exactly performed as written in sudoers file, e.g.:
+$ sudo apt update
+$ sudo apt upgrade -y
+```
+
+### diagnostics
+
+```bash
+sudo apt install intel-gpu-top
+sudo apt install i7z
+sudo apt install stress
+```
+
+
 ### adduser
 
 ### [Undervolt Intel Core CPUs until 9th Generation](https://cryptosingh1337.medium.com/how-to-under-volt-intel-i-series-cpu-in-ubuntu-abc9283f4760)
@@ -147,3 +168,6 @@ sudo nano /etc/tlp.conf
 flatpak install flathub com.github.d4nj1.tlpui
 ```
 
+### more stuff
+- firefox install h264ify extension
+- firefox disable AV1 support on old PCs: "media.av1.enabled" set to false
