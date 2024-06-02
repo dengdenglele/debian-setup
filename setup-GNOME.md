@@ -58,11 +58,12 @@ sudo apt install gnome-tweaks
 
 ## gnome-extensions
 
+Extract infos about installed & enabled [GNOME extensions](https://askubuntu.com/questions/1133782/command-to-list-installed-and-enabled-gnome-extensions):
 ```bash
 $ gnome-extensions list --enabled
 ```
 
-Output
+Exemplary Output:
 ```
 just-perfection-desktop@just-perfection
 middleclickclose@paolo.tranquilli.gmail.com
