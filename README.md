@@ -5,7 +5,7 @@ How to setup a minimal debian installation without bloat
 # During graphical installation process
 
 - Skip network configuration
-- "No" to everything
+- Select "No" for any questions asked
 - Do not install anything additionally
 
 # [TTY environment](https://askubuntu.com/questions/66195/what-is-a-tty-and-how-do-i-access-a-tty)
@@ -89,11 +89,9 @@ sudo apt install systemd-timesyncd
 sudo apt remove yelp totem gnome-software gnome-characters gnome-contacts firefox-esr -y
 ```
 
+# More advanced stuff
 
-
-## More advanced stuff
-
-### grub
+## grub
 
 Remove os-prober, if Windows shall be hidden from grub menu
 
@@ -104,7 +102,7 @@ sudo apt remove os-prober
 Add custom background to grub menu
 
 ```bash
-sudo cp /path/of/picture /boot/grub
+sudo cp /path/to/picture /boot/grub
 ```
 
 Customize grub file
@@ -122,13 +120,21 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 ```
 
 
-Always update grub settings and make them active
+Always update grub settings and make them active:
 
 ```bash
 sudo update-grub
 ```
 
-### visudo
+## adduser
+
+Add an additional user, stick with the defaults, will not have sudo rights:
+
+```bash
+sudo adduser username
+```
+
+## visudo
 
 ```bash
 $ sudo visudo
@@ -141,33 +147,3 @@ username ALL = NOPASSWD: /usr/bin/apt upgrade -y
 $ sudo apt update
 $ sudo apt upgrade -y
 ```
-
-### diagnostics
-
-```bash
-sudo apt install intel-gpu-top
-sudo apt install i7z
-sudo apt install stress
-```
-
-
-### adduser
-
-### [Undervolt Intel Core CPUs until 9th Generation](https://cryptosingh1337.medium.com/how-to-under-volt-intel-i-series-cpu-in-ubuntu-abc9283f4760)
-
-### [TLP Optimizing Guide](https://linrunner.de/tlp/support/optimizing.html)
-
-```bash
-sudo apt install tlp
-sudo tlp start
-
-# edit settings in
-sudo nano /etc/tlp.conf
-
-# nice GUI for beginners
-flatpak install flathub com.github.d4nj1.tlpui
-```
-
-### more stuff
-- firefox install h264ify extension
-- firefox disable AV1 support on old PCs: "media.av1.enabled" set to false
