@@ -44,5 +44,5 @@ apt list --installed > ~/installed_deb_packages.md
 
 Save list of installed snap packages in .md file
 ```bash
-snap list > ~/installed_snap_packages.md
+snap list -all > ~/installed_snap_packages.md
 ```
