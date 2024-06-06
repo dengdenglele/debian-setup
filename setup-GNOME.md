@@ -60,7 +60,9 @@ sudo apt install gnome-tweaks
 
 Extract infos about installed & enabled [GNOME extensions](https://askubuntu.com/questions/1133782/command-to-list-installed-and-enabled-gnome-extensions):
 ```bash
-$ gnome-extensions list --enabled
+gnome-extensions list --enabled > ~/installed_enabled_gnome_extensions.md
+
+gnome-extensions list --enabled
 ```
 
 Exemplary Output:
