@@ -83,6 +83,12 @@ sudo reboot
 sudo apt install systemd-timesyncd
 ```
 
+## [Fix incorrect time in Windows when using dual-boot](https://itsfoss.com/wrong-time-dual-boot/)
+
+```bash
+timedatectl set-local-rtc 1
+```
+
 ## Remove unnecessary packages
 
 ```bash
