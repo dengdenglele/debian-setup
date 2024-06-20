@@ -1,14 +1,38 @@
 # background
 
-- [Cursor keys belong at the center of your keyboard, DEPRECATED due to Xorg](https://tonsky.me/blog/cursor-keys/)
-- TL;DR Remap CapsLock + IJKL to act as cursor keys and teach yourself to use it
+- [Theory: Cursor keys belong at the center of your keyboard, DEPRECATED due to Xorg](https://tonsky.me/blog/cursor-keys/)
+- TL;DR: Remap CapsLock + IJKL (or WASD) to act as arrow keys
 
 # setup 60% keyboard
 
-- [install keyd (wayland) from source](https://github.com/rvaiya/keyd)
-- [use the "sample config" for capslock=overload(symbols, esc)](https://github.com/rvaiya/keyd)
-- [remap j, k, l, i to left, down, right, up. EXAMPLE](https://foosel.net/til/how-to-remap-keys-under-linux-and-wayland/)
-- my config file can be found in directory "keyd_config_file"
+- [Install keyd (wayland) from source](https://github.com/rvaiya/keyd):
+
+``` bash
+# install from source
+git clone https://github.com/rvaiya/keyd
+cd keyd
+make && sudo make install
+sudo systemctl enable keyd && sudo systemctl start keyd
+
+# enable the daemon
+sudo systemctl enable keyd
+
+# create .conf file...
+sudo nano /etc/keyd/default.conf
+
+# ... or copy the old "default.conf" into /etc/keyd
+# My config file can be found in directory "keyd_config_file"
+sudo cp /path/to/keyd_config_file/default.conf /etc/keyd/default.conf
+
+# reload the new config set
+sudo keyd reload
+
+# for more infos check out
+man keyd
+```
+
+- [Use the "sample config" for capslock=overload(symbols, esc)](https://github.com/rvaiya/keyd)
+- [Remap j, k, l, i to left, down, right, up. EXAMPLE](https://foosel.net/til/how-to-remap-keys-under-linux-and-wayland/)
 
 ## setup virtual keyboard mouse with keyd
 - Enable "Mouse Keys" in "GNOME Settings" > "Accessibility" > "Pointing & Clicking"
