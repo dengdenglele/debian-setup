@@ -41,3 +41,5 @@ Verify the changes:
 ```bash
 grep guest /etc/passwd
 ```
+
+The "temporary" home directory will be cleared after a reboot of the system.
