@@ -131,25 +131,3 @@ Always update grub settings and make them active:
 ```bash
 sudo update-grub
 ```
-
-## adduser
-
-Add an additional user, stick with the defaults, will not have sudo rights:
-
-```bash
-sudo adduser username
-```
-
-## visudo
-
-```bash
-$ sudo visudo
-
-# at the bottom of the file add following line to enable non sudo users to update and upgrade system
-username ALL = NOPASSWD: /usr/bin/apt update
-username ALL = NOPASSWD: /usr/bin/apt upgrade -y
-
-# commands must be exactly performed as written in sudoers file, e.g.:
-$ sudo apt update
-$ sudo apt upgrade -y
-```
