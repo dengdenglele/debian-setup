@@ -40,4 +40,11 @@ nmcli con mod wg_config connection.autoconnect no
 - [Wireguard VPN unter Linux nutzen - Tutorial](https://www.youtube.com/watch?v=npDDELuiqxY)
 - [How to stop wireguard vpn from auto connecting at startup?](https://www.reddit.com/r/kde/comments/17ud9kj/how_to_stop_wireguard_vpn_from_auto_connecting_at/)
 
+Setup Uni Bamberg VPN
 
+- [VPN unter Linux - Mit Bordmitteln](https://www.uni-bamberg.de/its/dienstleistungen/netz/vpn/einrichten/linux/)
+```bash
+# setup VPN with the PDF provided by the link above
+# turn on/off vpn connection with Uni Bamberg
+nmcli connection up vpn_bamberg
+nmcli connection down vpn_bamberg
