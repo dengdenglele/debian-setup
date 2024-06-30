@@ -97,6 +97,12 @@ sudo apt remove yelp totem gnome-software gnome-characters gnome-contacts firefo
 
 # More advanced stuff
 
+## check Debian version
+
+```bash
+cat /etc/debian_version
+```
+
 ## grub
 
 Remove os-prober, if Windows shall be hidden from grub menu
