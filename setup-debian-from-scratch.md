@@ -4,6 +4,7 @@ How to setup a minimal debian installation without bloat
 
 # During graphical installation process
 
+- [Follow this guide to setup full disk encryption in combination with dual boot Windows 10/11](https://blog.cyberethical.me/dual-boot-windows-11-encrypted-kali)
 - Skip network configuration
 - Select "No" for any questions asked
 - Do not install anything additionally
