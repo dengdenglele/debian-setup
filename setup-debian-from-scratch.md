@@ -67,7 +67,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install gnome-core
 sudo reboot
 ```
-# GNOME Desktop environment
+# Enter GNOME Desktop environment
 
 Now it's getting colorful
 
@@ -96,15 +96,14 @@ timedatectl set-local-rtc 1
 sudo apt remove yelp totem gnome-software gnome-characters gnome-contacts firefox-esr -y
 ```
 
-# More advanced stuff
 
-## check Debian version
+## Check Debian version
 
 ```bash
 cat /etc/debian_version
 ```
 
-## grub
+## Customize boot manager menu of GRUB
 
 Remove os-prober, if Windows shall be hidden from grub menu
 
@@ -112,7 +111,7 @@ Remove os-prober, if Windows shall be hidden from grub menu
 sudo apt remove os-prober
 ```
 
-Add custom background to grub menu
+Add custom background to grub boot manager menu
 
 ```bash
 sudo cp /path/to/picture /boot/grub
@@ -131,7 +130,6 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 # "quiet" lets all command line text between "grub menu" and "decrytion prompt" disappear.
 # "splash" makes the decryption prompt look nice.
 ```
-
 
 Always update grub settings and make them active:
 
