@@ -103,6 +103,16 @@ sudo apt remove yelp totem gnome-software gnome-characters gnome-contacts firefo
 cat /etc/debian_version
 ```
 
+## [How to Set or Change Hostname in Linux](https://linuxize.com/post/how-to-change-hostname-in-linux/)
+
+```bash
+# check current hostname
+echo $HOSTNAME
+hostnamectl
+# change hostname
+sudo hostnamectl set-hostname newHostname
+```
+
 ## Customize boot manager menu of GRUB
 
 Remove os-prober, if Windows shall be hidden from grub menu
