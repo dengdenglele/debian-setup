@@ -29,6 +29,18 @@ sudo apt install openssh-server
 sudo systemctl enable ssh
 ```
 
+How to Fix “Too many authentication failures” Error / override pubkey identification / force password usage
+```bash
+# if following command fails due to "Too many authentication failures"
+ssh username@IpAdressOfServer
+# force ssh to use password instead (=disable pubkey authentication)
+ssh username@IpAdressOfServer -o PubkeyAuthentication=no
+```
+
+
+**Background:** Ssh client machine will try out all available private keys stored in .ssh folder to get access to ssh server. When all of them fail (for example more than 30 private keys were used) and the server only accepts a given amount of attempts (e.g. max 3 attempts), the server will return "Too many authentication failures" and close the connection immediately. If this happens, the ssh client will also be unable to use password login.
+
+
 # [How to disable ssh password login on Linux to increase security](https://www.cyberciti.biz/faq/how-to-disable-ssh-password-login-on-linux/)
 
 - [more on hardening ssh server](https://download.asperasoft.com/download/docs/client/3.5.2/client_admin_linux/webhelp/dita/ssh_server.html)
