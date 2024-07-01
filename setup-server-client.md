@@ -32,10 +32,20 @@ sudo systemctl enable ssh
 How to Fix “Too many authentication failures” Error / override pubkey identification / force password usage
 ```bash
 # if following command fails due to "Too many authentication failures"
-ssh username@IpAdressOfServer
+ssh username@IpAddressOfServer
 # force ssh to use password instead (=disable pubkey authentication)
 ssh username@IpAdressOfServer -o PubkeyAuthentication=no
 ```
+
+Setup pubkey on ssh server despite "Too many authentication failures" error
+
+```bash
+# keep the syntax, otherwise the pubkey copy process will fail
+ssh-copy-id [-f] [-n] [-i identity file] [-p port] [-o ssh_option] [user@]hostname
+ssh-copy-id -i /client/path/to/pubkeyFile -o PubkeyAuthentication=no username@IpAddressOfServer
+```
+
+[Understanding ssh-copy-id command-line options](https://www.ssh.com/academy/ssh/copy-id)
 
 
 **Background:** Ssh client machine will try out all available private keys stored in .ssh folder to get access to ssh server. When all of them fail (for example more than 30 private keys were used) and the server only accepts a given amount of attempts (e.g. max 3 attempts), the server will return "Too many authentication failures" and close the connection immediately. If this happens, the ssh client will also be unable to use password login.
