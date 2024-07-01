@@ -26,6 +26,9 @@ sudo systemctl enable ssh
 
 # [How to disable ssh password login on Linux to increase security](https://www.cyberciti.biz/faq/how-to-disable-ssh-password-login-on-linux/)
 
+- [more on hardening ssh server](https://download.asperasoft.com/download/docs/client/3.5.2/client_admin_linux/webhelp/dita/ssh_server.html)
+
+# Other issues
 - [How to Fix “SSH Too Many Authentication Failures” Error](https://www.tecmint.com/fix-ssh-too-many-authentication-failures-error/)
 - [How to recover from "Too many Authentication Failures for user root"](https://serverfault.com/questions/36291/how-to-recover-from-too-many-authentication-failures-for-user-root)
 - [Only for background knowledge: Debian: How To Enable The Root User (Login & SSH)](https://raspberrytips.com/enable-root-debian/)
