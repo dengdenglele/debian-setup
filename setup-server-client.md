@@ -10,6 +10,8 @@ sudo ufw allow ssh
 sudo ufw status
 ```
 
+[More about ssh and port 22](https://www.cyberciti.biz/faq/ufw-allow-incoming-ssh-connections-from-a-specific-ip-address-subnet-on-ubuntu-debian/)
+
 Setup client software
 ```bash
 sudo apt install openssh-client
