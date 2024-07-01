@@ -5,8 +5,8 @@ Setup firewall (ufw) on both client and server
 sudo apt install ufw
 # allow port 22, otherwise SSH does not work
 sudo ufw allow ssh
-# check if open port 22 rule was successfully set up
-sudo ufw status
+# check if open port 22 rule was successfully added
+sudo ufw show added
 # activate firewall, if and only if port 22 rule was allowed in previous command
 sudo ufw enable
 # check again if port 22 is open AND firewall is enabled
