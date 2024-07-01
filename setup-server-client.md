@@ -1,5 +1,30 @@
-- [Install SSH on a fresh Debian system](https://www.cyberciti.biz/faq/how-to-install-ssh-on-ubuntu-linux-using-apt-get/)
-- [How to disable ssh password login on Linux to increase security](https://www.cyberciti.biz/faq/how-to-disable-ssh-password-login-on-linux/)
+# [Installing SSH on Debian-based distros](https://www.cyberciti.biz/faq/how-to-install-ssh-on-ubuntu-linux-using-apt-get/)
+
+Setup firewall (ufw) on both client and server
+```bash
+sudo apt install ufw
+sudo ufw enable
+sudo ufw allow ssh
+sudo ufw status
+```
+
+Setup client software
+```bash
+sudo apt install openssh-client
+# access server
+ssh userNameOnServer@ipAdressOfServer
+```
+
+Setup server software
+```bash
+# setup openssh-server (on server)
+sudo apt install openssh-server
+sudo systemctl enable ssh
+```
+
+# [How to disable ssh password login on Linux to increase security](https://www.cyberciti.biz/faq/how-to-disable-ssh-password-login-on-linux/)
+
+- 
 - [How to Fix “SSH Too Many Authentication Failures” Error](https://www.tecmint.com/fix-ssh-too-many-authentication-failures-error/)
 - [How to recover from "Too many Authentication Failures for user root"](https://serverfault.com/questions/36291/how-to-recover-from-too-many-authentication-failures-for-user-root)
 - [Only for background knowledge: Debian: How To Enable The Root User (Login & SSH)](https://raspberrytips.com/enable-root-debian/)
