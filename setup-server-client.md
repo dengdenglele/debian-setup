@@ -10,7 +10,7 @@ sudo ufw allow ssh
 sudo ufw status
 ```
 
-[More about ssh and port 22](https://www.cyberciti.biz/faq/ufw-allow-incoming-ssh-connections-from-a-specific-ip-address-subnet-on-ubuntu-debian/)
+More about ssh and port 22 [here](https://www.cyberciti.biz/faq/ufw-allow-incoming-ssh-connections-from-a-specific-ip-address-subnet-on-ubuntu-debian/) and [here](https://www.cherryservers.com/blog/how-to-configure-ubuntu-firewall-with-ufw)
 
 Setup client software
 ```bash
