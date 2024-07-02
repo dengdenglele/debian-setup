@@ -22,7 +22,7 @@ flatpak install flathub com.github.d4nj1.tlpui
 # Disable unsupported modern codecs on Firefox
 Unsupported codecs running on old devices are accelerated via software / CPU only.
 This can cause high energy consumption and stuttering video playback with high video resolutions.
-YouTube and other pages do not check, if modern codecs are supported, thus do not fallback on older, hardware accelerated ones.
+YouTube and other sites do not check if modern codecs are supported, so they will not fall back to older hardware-accelerated codecs.
 
 - Install [h264ify](https://addons.mozilla.org/de/firefox/addon/h264ify/) add-on to enforce usage of supported H.264 codec on all YouTube videos
 - Disable AV1 support: enter "about:config" in address bar, search for "media.av1.enabled" and set it to false
