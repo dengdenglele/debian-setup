@@ -1,12 +1,11 @@
-## adduser
-
+## Add new user without sudo privilges
 Add an additional user, stick with the defaults, will not have sudo rights:
 
 ```bash
 sudo adduser username
 ```
 
-## visudo
+## Allow user to perform specific commands without being explicitly in sudo group or requiring password input
 
 ```bash
 $ sudo visudo
@@ -15,13 +14,9 @@ $ sudo visudo
 username ALL = NOPASSWD: /usr/bin/apt update
 username ALL = NOPASSWD: /usr/bin/apt upgrade -y
 
-# at the bottom of the sudoers file add following line to enable non sudo users to turn of the system
-username ALL = NOPASSWD: /usr/sbin/shutdown now
-
 # commands must be exactly performed as written in sudoers file, e.g.:
 $ sudo apt update
 $ sudo apt upgrade -y
-$ sudo shutdown now
 ```
 
 ## [Create a "guest" account with home directory in /tmp/home/guest](https://www.tutorialspoint.com/how-to-change-the-default-home-directory-of-a-user-on-linux)
