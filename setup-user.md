@@ -11,13 +11,17 @@ sudo adduser username
 ```bash
 $ sudo visudo
 
-# at the bottom of the file add following line to enable non sudo users to update and upgrade system
+# at the bottom of the sudoers file add following lines to enable non sudo users to update and upgrade system
 username ALL = NOPASSWD: /usr/bin/apt update
 username ALL = NOPASSWD: /usr/bin/apt upgrade -y
+
+# at the bottom of the sudoers file add following line to enable non sudo users to turn of the system
+username ALL = NOPASSWD: /usr/sbin/shutdown now
 
 # commands must be exactly performed as written in sudoers file, e.g.:
 $ sudo apt update
 $ sudo apt upgrade -y
+$ sudo shutdown now
 ```
 
 ## [Create a "guest" account with home directory in /tmp/home/guest](https://www.tutorialspoint.com/how-to-change-the-default-home-directory-of-a-user-on-linux)
