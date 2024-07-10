@@ -101,6 +101,7 @@ sudo sshd -T | grep -E -i 'ChallengeResponseAuthentication|PasswordAuthenticatio
 
 - [A note about troubleshooting issues](https://www.cyberciti.biz/faq/how-to-disable-ssh-password-login-on-linux/)
 - [More on hardening SSH Server](https://download.asperasoft.com/download/docs/client/3.5.2/client_admin_linux/webhelp/dita/ssh_server.html)
+- [Top 20 OpenSSH Server Best Security Practices](https://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html)
 
 # Root account on SSH Server
 
