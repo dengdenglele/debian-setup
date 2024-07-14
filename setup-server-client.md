@@ -32,6 +32,8 @@ sudo systemctl enable ssh
 
 **Background:** When ufw is setup without allowing SSH aka port 22 to be open, the "ssh user@ip-address" command will not work. A message such as "ssh: connect to host 192.123.456.789 port 22: Connection timed out" will be returned after a while.
 
+When a VPN service such as Mullvad VPN is running on the server, SSH connection from a client will fail. A message such as "ssh: connect to host 192.123.456.789 port 22: Connection timed out" will be returned after a while.
+
 More about ssh and port 22 [here](https://www.cyberciti.biz/faq/ufw-allow-incoming-ssh-connections-from-a-specific-ip-address-subnet-on-ubuntu-debian/) and [here](https://www.cherryservers.com/blog/how-to-configure-ubuntu-firewall-with-ufw)
 
 # [Log in to the SSH server and set up pubkey](https://www.cyberciti.biz/faq/how-to-disable-ssh-password-login-on-linux/)
