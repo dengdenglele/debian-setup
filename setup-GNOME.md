@@ -83,3 +83,20 @@ display-brightness-ddcutil@themightydeity.github.com
 clipboard-indicator@tudmotu.com
 ddterm@amezin.github.com
 ```
+
+## [Increase width of scrollbars in GTK3 and GTK4 applications](https://www.reddit.com/r/gnome/comments/152equt/change_scrollbar_width_gnome_434_adwaita/)
+
+Create the following files in .config folder:
+
+```bash
+touch ~/.config/gtk-3.0/gtk.css
+touch ~/.config/gtk-4.0/gtk.css
+```
+
+Write the following content into both .css files:
+
+```bash
+scrollbar slider {
+ padding: 8px;
+}
+```
