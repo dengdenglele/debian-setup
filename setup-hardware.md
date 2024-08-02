@@ -42,4 +42,8 @@ sudo i7z
 sudo apt install stress
 ## stress test the cpu with 8 threads (e.g. 4 pyhsical cores + 4 virtual cores)
 sudo stress --cpu 8
+
+# Print out battery charging threshold for laptops
+cat /sys/class/power_supply/BAT0/charge_start_threshold
+cat /sys/class/power_supply/BAT0/charge_stop_threshold
 ```
