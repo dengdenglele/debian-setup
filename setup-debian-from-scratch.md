@@ -4,16 +4,18 @@ How to setup a minimal debian installation without bloat
 
 # During graphical installation process
 
+- Make sure that an Ethernet cable is connected, the setup program will automatically configure the network configuration
 - [Follow this guide to setup full disk encryption in combination with dual boot Windows 10/11](https://blog.cyberethical.me/dual-boot-windows-11-encrypted-kali)
-- Skip network configuration
-- Select "No" for any questions asked
-- Do not install anything additionally
+- Select "No" for any questions asked (survey, ...)
+- Do not install anything additionally (uncheck everything)
 
 # [TTY environment](https://askubuntu.com/questions/66195/what-is-a-tty-and-how-do-i-access-a-tty)
 
 Not much to see, only darkness. And a command line.
 
 ## [Configure a Device Dynamically with DHCP](https://www.cyberciti.biz/faq/howto-configuring-network-interface-cards-on-debian/)
+
+If setup was performed without an Internet connection/network configuration, follow these steps.
 
 Get the name of your network interface and write down its name:
 
@@ -42,6 +44,8 @@ ifup <networkInterface>
 
 ## [Setup apt SourcesList](https://wiki.debian.org/SourcesList#Example_sources.list)
 
+If setup was performed without an Internet connection/software repositories, follow these steps.
+
 Edit the sources.list file:
 
 ```bash
@@ -64,6 +68,7 @@ sudo apt update && sudo apt upgrade -y
 ## [Install GNOME core (minimal setup)](https://wiki.debian.org/Gnome)
 
 ```bash
+sudo apt update
 sudo apt install gnome-core
 sudo reboot
 ```
