@@ -54,3 +54,20 @@ sudo stress --cpu 8
 cat /sys/class/power_supply/BAT0/charge_start_threshold
 cat /sys/class/power_supply/BAT0/charge_stop_threshold
 ```
+
+# Setup network interfaces in server environment
+An example of the contents of the /etc/network/interfaces file:
+```bash
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+allow-hotplug enp0s31f6
+iface enp0s31f6 inet dhcp
+```
