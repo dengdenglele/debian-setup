@@ -133,3 +133,13 @@ root L yyyy-mm-dd 99999 7 -1
 
 - [How to Enable and Disable Root User Account in Ubuntu](https://linuxize.com/post/how-to-enable-and-disable-root-user-account-in-ubuntu/)
 - *Only for background knowledge*: [Debian: How To Enable The Root User (Login & SSH)](https://raspberrytips.com/enable-root-debian/)
+
+# [How to Set or Change Hostname in Linux](https://linuxize.com/post/how-to-change-hostname-in-linux/)
+
+```bash
+# check current hostname
+echo $HOSTNAME
+hostnamectl
+# change hostname
+sudo hostnamectl set-hostname newHostname
+```
