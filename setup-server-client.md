@@ -65,6 +65,16 @@ ssh-copy-id [-f] [-n] [-i identity file] [-p port] [-o ssh_option] [user@]hostna
 - [How to Fix “SSH Too Many Authentication Failures” Error](https://www.tecmint.com/fix-ssh-too-many-authentication-failures-error/)
 - [How to recover from "Too many Authentication Failures for user root"](https://serverfault.com/questions/36291/how-to-recover-from-too-many-authentication-failures-for-user-root)
 
+# Set up public key manually on ssh server
+
+```bash
+cd
+mkdir .ssh
+cd .ssh
+vi authorized_keys
+# inside autorized keys place the string from client_device_ssh.pub file
+```
+
 # [How to disable ssh password login on Linux to increase security](https://www.cyberciti.biz/faq/how-to-disable-ssh-password-login-on-linux/)
 
 Prerequisites:
