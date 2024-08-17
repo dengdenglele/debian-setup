@@ -18,6 +18,13 @@ sudo nano /etc/tlp.conf
 # nice GUI for beginners
 flatpak install flathub com.github.d4nj1.tlpui
 ```
+Do not disable 
+- "CPU_BOOST_ON_BAT=1" and
+- "CPU_HWP_DYN_BOOST_ON_BAT=1",
+
+otherwise Intel CPU (8th gen?) will not get pass 800MHz when 
+- "CPU_ENERGY_PERF_POLICY_ON_BAT=balance_power" is set to "balance_power"
+
 
 # Disable unsupported modern codecs on Firefox
 Unsupported codecs running on old devices are accelerated via software / CPU only.
