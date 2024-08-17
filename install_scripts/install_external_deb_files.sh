@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Chrome
+sudo apt install wget
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt-get install -f -y
@@ -24,6 +25,7 @@ newgrp docker
 ######################################################################################################################################################################
 ######################################################################################################################################################################
 # Firefox official .deb
+sudo apt install wget
 sudo install -d -m 0755 /etc/apt/keyrings
 wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
 gpg -n -q --import --import-options import-show /etc/apt/keyrings/packages.mozilla.org.asc | awk '/pub/{getline; gsub(/^ +| +$/,""); print "\n"$0"\n"}'
@@ -51,6 +53,7 @@ sudo apt-get install onlyoffice-desktopeditors
 ######################################################################################################################################################################
 # Signal
 # 1. Install our official public software signing key:
+sudo apt install wget
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
 cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
 # 2. Add our repository to your list of repositories:
@@ -62,6 +65,7 @@ sudo apt update && sudo apt install signal-desktop
 ######################################################################################################################################################################
 ######################################################################################################################################################################
 # VSCodium
+sudo apt install wget
 wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
     | gpg --dearmor \
     | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
@@ -84,5 +88,6 @@ sudo apt install code
 ######################################################################################################################################################################
 ######################################################################################################################################################################
 # Zoom
+sudo apt install wget
 wget https://zoom.us/client/latest/zoom_amd64.deb
 sudo apt install ./zoom_amd64.deb -y
