@@ -1,9 +1,18 @@
 # [Installing ufw and SSH on Debian-based distros](https://www.cyberciti.biz/faq/how-to-install-ssh-on-ubuntu-linux-using-apt-get/)
 
-Set up firewall (ufw) on both client and server:
+## Set up client software (local device) 
 ```bash
-sudo apt update
-sudo apt upgrade
+sudo apt install openssh-client
+```
+
+## Set up server software (remote device)
+```bash
+sudo apt install openssh-server
+sudo systemctl enable ssh
+```
+
+## Set up firewall (ufw) on both client and server
+```bash
 sudo apt install ufw
 
 # allow port 22, otherwise SSH does not work
@@ -19,16 +28,6 @@ sudo ufw enable
 sudo ufw status
 ```
 
-Set up client software:
-```bash
-sudo apt install openssh-client
-```
-
-Set up server software:
-```bash
-sudo apt install openssh-server
-sudo systemctl enable ssh
-```
 
 **Background:** When ufw is setup without allowing SSH aka port 22 to be open, the "ssh user@ip-address" command will not work. A message such as "ssh: connect to host 192.123.456.789 port 22: Connection timed out" will be returned after a while.
 
