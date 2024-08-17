@@ -96,6 +96,11 @@ timedatectl set-local-rtc 1
 sudo apt remove yelp totem gnome-software gnome-characters gnome-contacts firefox-esr -y
 ```
 
+## Add additional packages
+
+```bash
+sudo apt install wget pip gnome-tweaks
+```
 
 ## Check Debian version
 
