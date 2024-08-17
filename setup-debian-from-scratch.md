@@ -42,7 +42,7 @@ Start the interface:
 ifup <networkInterface>
 ```
 
-## [Setup apt SourcesList](https://wiki.debian.org/SourcesList#Example_sources.list)
+## [Set up /etc/apt/sources.list manually](https://wiki.debian.org/SourcesList#Example_sources.list)
 
 If setup was performed without an Internet connection/software repositories, follow these steps.
 
@@ -83,22 +83,16 @@ sudo rm /etc/network/interfaces
 sudo reboot
 ```
 
-## [Fix missing time synchronization service](https://manpages.debian.org/unstable/systemd-timesyncd/systemd-timesyncd.service.8.en.html)
-
-```bash
-sudo apt install systemd-timesyncd
-```
-
 ## [Fix incorrect time in Windows when using dual-boot](https://itsfoss.com/wrong-time-dual-boot/)
 
 ```bash
 timedatectl set-local-rtc 1
 ```
 
-## Remove unnecessary packages
+## [Fix missing time synchronization service](https://manpages.debian.org/unstable/systemd-timesyncd/systemd-timesyncd.service.8.en.html)
 
 ```bash
-sudo apt remove yelp totem gnome-software gnome-characters gnome-contacts firefox-esr -y
+sudo apt install systemd-timesyncd
 ```
 
 ## Add additional packages
@@ -107,20 +101,17 @@ sudo apt remove yelp totem gnome-software gnome-characters gnome-contacts firefo
 sudo apt install wget pip gnome-tweaks
 ```
 
+## Remove unnecessary packages
+
+```bash
+sudo apt remove yelp totem gnome-software gnome-characters gnome-contacts firefox-esr -y
+sudo apt autoremove --purge
+```
+
 ## Check Debian version
 
 ```bash
 cat /etc/debian_version
-```
-
-## [How to Set or Change Hostname in Linux](https://linuxize.com/post/how-to-change-hostname-in-linux/)
-
-```bash
-# check current hostname
-echo $HOSTNAME
-hostnamectl
-# change hostname
-sudo hostnamectl set-hostname newHostname
 ```
 
 ## Customize boot manager menu of GRUB
