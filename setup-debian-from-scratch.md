@@ -5,15 +5,18 @@ How to setup a minimal debian installation without bloat
 # During graphical installation process
 
 - Make sure that an Ethernet cable is connected, the setup program will automatically configure the network configuration
+- Select a hostname e.g. "debian-thinkpad"
+- Domainname can be left empty
 - [Follow this guide to setup full disk encryption in combination with dual boot Windows 10/11](https://blog.cyberethical.me/dual-boot-windows-11-encrypted-kali)
-- Select "No" for any questions asked (survey, ...)
-- Do not install anything additionally (uncheck everything)
+- Select install sources, select current country, stick with default server "deb.debian.org"
+- Select "No" when asked for "Configuring popularity-contest"
+- Do not install anything extra when asked (uncheck everything)
 
 # [TTY environment](https://askubuntu.com/questions/66195/what-is-a-tty-and-how-do-i-access-a-tty)
 
 Not much to see, only darkness. And a command line.
 
-## [Configure a Device Dynamically with DHCP](https://www.cyberciti.biz/faq/howto-configuring-network-interface-cards-on-debian/)
+## [Optional - Configure a Device Dynamically with DHCP](https://www.cyberciti.biz/faq/howto-configuring-network-interface-cards-on-debian/)
 
 If setup was performed without an Internet connection/network configuration, follow these steps.
 
@@ -42,7 +45,7 @@ Start the interface:
 ifup <networkInterface>
 ```
 
-## [Set up /etc/apt/sources.list manually](https://wiki.debian.org/SourcesList#Example_sources.list)
+## [Optional - Set up /etc/apt/sources.list manually](https://wiki.debian.org/SourcesList#Example_sources.list)
 
 If setup was performed without an Internet connection/software repositories, follow these steps.
 
