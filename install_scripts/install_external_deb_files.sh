@@ -20,7 +20,9 @@ echo \
 sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 sudo gpasswd -a $USER docker
-newgrp docker
+# please reboot system
+# or run the following command: newgrp docker
+# test functionality of docker without sudo: docker run hello-world
 ######################################################################################################################################################################
 ######################################################################################################################################################################
 ######################################################################################################################################################################
