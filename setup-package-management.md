@@ -40,6 +40,12 @@ Save list of installed .deb packages in .md file
 apt list --installed > ~/installed_deb_packages.md
 ```
 
+Remove a package AND corresponding config files with remove and --purge (config files in home directory are left untouched)
+```bash
+sudo apt remove [package-name] --purge
+```
+[apt remove vs apt purge: What's the Difference?](https://itsfoss.com/apt-remove-purge/)
+
 # snap
 
 Save list of installed snap packages in .md file
