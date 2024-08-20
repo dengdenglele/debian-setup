@@ -15,6 +15,9 @@ sudo tlp start
 # edit settings in
 sudo nano /etc/tlp.conf
 
+# reinstall tlp with default settings
+sudo apt remove tlp --purge && sudo apt install tlp
+
 # nice GUI for beginners
 flatpak install flathub com.github.d4nj1.tlpui
 ```
@@ -25,6 +28,7 @@ Do not disable
 otherwise Intel CPU (8th gen?) will not get pass 800MHz when 
 - "CPU_ENERGY_PERF_POLICY_ON_BAT=balance_power" is set to "balance_power"
 
+[Restoring TLP default settings - how?](https://www.reddit.com/r/linux4noobs/comments/yv1yim/restoring_tlp_default_settings_how/)
 
 # Disable unsupported modern codecs on Firefox
 Unsupported codecs running on old devices are accelerated via software / CPU only.
