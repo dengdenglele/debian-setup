@@ -96,8 +96,11 @@ PasswordAuthentication no
 UsePAM no
 PermitRootLogin no
 
-# reload or restart the ssh server
+# reload the ssh service (or completely reboot the server/computer)
 sudo systemctl reload ssh
+# Difference reload and restart
+## reload: The reload command tells the service to re-read its configuration files without stopping the service
+## restart: The restart command stops the service and then starts it again
 ```
 
 Verify settings:
