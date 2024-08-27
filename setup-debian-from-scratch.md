@@ -101,7 +101,7 @@ sudo apt install systemd-timesyncd
 ## Add additional packages
 
 ```bash
-sudo apt install wget curl pip gnome-tweaks
+sudo apt install wget gpg curl pip gnome-tweaks
 ```
 
 ## Remove unnecessary packages
