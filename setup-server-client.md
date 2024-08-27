@@ -145,4 +145,10 @@ echo $HOSTNAME
 hostnamectl
 # change hostname
 sudo hostnamectl set-hostname newHostname
+# also edit the config file, change all occurences of the old hostname to the new hostname
+## not doing so might lead to a warning after each command issued on the cli
+sudo vi /etc/hosts
 ```
+
+- [How to change hostname on Debian 12/11/10 Linux](https://www.cyberciti.biz/faq/how-to-change-hostname-on-debian-10-linux/)
+- [Linux Upskill Challenge: Day 3 - Power trip!](https://linuxupskillchallenge.org/03/?h=hostname#administrative-tasks)
