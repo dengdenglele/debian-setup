@@ -26,6 +26,10 @@ sudo ufw enable
 
 # check again if port 22 is open AND firewall is enabled
 sudo ufw status
+
+# BONUS allow port 80 and 443, needed for http and https
+sudo ufw allow http
+sudo ufw allow https
 ```
 
 
