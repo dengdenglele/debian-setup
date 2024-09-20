@@ -57,11 +57,15 @@ This happens when the ssh-agent is not running
 
 Activate the ssh-agent and then run ssh-add:
 ```bash
-eval `ssh-agent -s`
+eval $(ssh-agent -s)
+# see note below, bad style, but also works: eval `ssh-agent -s`
+# Add the default SSH keys in ~/.ssh to the ssh-agent
 ssh-add
-# for a specific private key add path
+# Add a specific key to the ssh-agent
 ssh-add ~/.ssh/the-private-key
 ```
+
+**NOTE**: Do not use \`command\` backticks for command substitution, the prefered method is $(command). See [gnu reference](https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html).
 
 # [Log in to the SSH server and set up pubkey](https://www.cyberciti.biz/faq/how-to-disable-ssh-password-login-on-linux/)
 
