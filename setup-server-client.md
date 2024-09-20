@@ -52,6 +52,17 @@ sudo apt autoremove --purge
 sudo apt install openssh-server
 ```
 
+## SSH into server still asks for user password despite pubkey already setup
+This happens when the ssh-agent is not running
+
+Activate the ssh-agent and then run ssh-add:
+```bash
+eval `ssh-agent -s`
+ssh-add
+# for a specific private key add path
+ssh-add ~/.ssh/the-private-key
+```
+
 # [Log in to the SSH server and set up pubkey](https://www.cyberciti.biz/faq/how-to-disable-ssh-password-login-on-linux/)
 
 How to Fix “Too many authentication failures” Error / override pubkey identification / force password usage:
