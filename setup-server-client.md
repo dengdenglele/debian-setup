@@ -62,11 +62,25 @@ ssh-copy-id -i /client/path/to/keyFile.pub -o PubkeyAuthentication=no username@I
 ssh-copy-id [-f] [-n] [-i identity file] [-p port] [-o ssh_option] [user@]hostname
 ```
 
-**Background:** Ssh client machine will try out all available private keys stored in .ssh folder to get access to ssh server. When all of them fail (for example more than 30 private keys were used) and the server only accepts a given amount of attempts (e.g. max 3 attempts), the server will return "Too many authentication failures" and close the connection immediately. If this happens, the ssh client will also be unable to use password login.
+## Background
+Ssh client machine will try out all available private keys stored in .ssh folder to get access to ssh server. When all of them fail (for example more than 30 private keys were used) and the server only accepts a given amount of attempts (e.g. max 3 attempts), the server will return "Too many authentication failures" and close the connection immediately. If this happens, the ssh client will also be unable to use password login.
 
 - [Understanding ssh-copy-id command-line options](https://www.ssh.com/academy/ssh/copy-id)
 - [How to Fix “SSH Too Many Authentication Failures” Error](https://www.tecmint.com/fix-ssh-too-many-authentication-failures-error/)
 - [How to recover from "Too many Authentication Failures for user root"](https://serverfault.com/questions/36291/how-to-recover-from-too-many-authentication-failures-for-user-root)
+
+## Difference between "ssh user@ip-address" and "ssh ip-address"
+
+Using ssh without username assumes that the user you are about to log in to has the same name as the user of the host machine
+```bash
+ssh <ip-address>
+```
+
+Using username before the ip address explicitly tells ssh to login as this user
+```bash
+ssh <username>@<ip-address>
+```
+
 
 # Set up public key manually on ssh server
 
