@@ -33,11 +33,24 @@ sudo ufw allow https
 ```
 
 
-**Background:** When ufw is setup without allowing SSH aka port 22 to be open, the "ssh user@ip-address" command will not work. A message such as "ssh: connect to host 192.123.456.789 port 22: Connection timed out" will be returned after a while.
+## Background
+When ufw is setup without allowing SSH aka port 22 to be open, the "ssh user@ip-address" command will not work. A message such as "ssh: connect to host 192.123.456.789 port 22: Connection timed out" will be returned after a while.
 
 When a VPN service such as Mullvad VPN is running on the server, SSH connection from a client will fail. A message such as "ssh: connect to host 192.123.456.789 port 22: Connection timed out" will be returned after a while.
 
 More about ssh and port 22 [here](https://www.cyberciti.biz/faq/ufw-allow-incoming-ssh-connections-from-a-specific-ip-address-subnet-on-ubuntu-debian/) and [here](https://www.cherryservers.com/blog/how-to-configure-ubuntu-firewall-with-ufw)
+
+## SSH into a VM with OpenSSH server leads to "This host key is known by the following other names/addresses"
+This happens when a VM was copied with openssh server pre-installed.
+During installation OpenSSH will assign a unique ED25519 key fingerprint.
+Also keys for RSA and ECDSA will be set upl
+
+Remove and purge the current installation of openssh-server, then reinstall openssh-server:
+```bash
+sudo apt purge openssh-server
+sudo apt autoremove --purge
+sudo apt install openssh-server
+```
 
 # [Log in to the SSH server and set up pubkey](https://www.cyberciti.biz/faq/how-to-disable-ssh-password-login-on-linux/)
 
