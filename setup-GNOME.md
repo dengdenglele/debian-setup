@@ -41,6 +41,12 @@ Append additional sources the sources.list file
   - Custom Shortcuts
     - Ctrl+Alt+T < gnome-terminal
    
+## Set up GNOME settings with terminal
+
+```bash
+gsettings set org.gnome.desktop.interface show-battery-percentage 'true'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+```
   
 ## gnome-tweaks
 
