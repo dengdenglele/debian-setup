@@ -13,6 +13,15 @@ nmcli connection down wg_config
 nmcli con mod wg_config connection.autoconnect no
 ```
 
+> ## Adhere to good naming schemes regarding valid interface names
+> - Lowercase letters (a-z)
+> - Uppercase letters (A-Z)
+> - Digits (0-9)
+> - Underscores (_)
+> - Name length maximum is 15
+> - Start with wg_* or wg0, wg1, wg2 ...
+
+
 - Use wireguard instead of port forwarding for access to FritzBox from the internet
 - Wireguard tunnel is using asymmetric x25519 keys for authentication for each registered device
 - HTTPS access to Fritzbox from the internet can be disabled (password authentication = never good!)
