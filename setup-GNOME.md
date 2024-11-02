@@ -58,6 +58,14 @@ gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift
 
 
 gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Super>d']"
+
+gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys calculator "['<Super>c']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys email "['<Super>b']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys help []
+gsettings set org.gnome.settings-daemon.plugins.media-keys www "['<Super>f']"
+
+
 ```
   
 ## gnome-tweaks
