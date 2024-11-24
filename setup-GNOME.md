@@ -74,8 +74,15 @@ gsettings set org.gnome.desktop.interface cursor-size 48
 gsettings set org.gnome.desktop.interface text-scaling-factor 1.25
 gsettings set org.gnome.desktop.interface locate-pointer true
 
+# Appearance
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.Terminal.Legacy.Settings theme-variant 'dark'
+
+# Keyboard
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'de')]"
+gsettings set org.gnome.desktop.input-sources xkb-options "['caps:ctrl_modifier']"
+## how to reset
+### gsettings reset org.gnome.desktop.input-sources xkb-options
 
 
 gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"
