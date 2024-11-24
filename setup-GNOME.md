@@ -69,6 +69,10 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-tim
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'nothing'
 gsettings set org.gnome.desktop.interface show-battery-percentage 'true'
 
+# Accessibility
+gsettings set org.gnome.desktop.interface cursor-size 48
+gsettings set org.gnome.desktop.interface text-scaling-factor 1.25
+gsettings set org.gnome.desktop.interface locate-pointer true
 
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.Terminal.Legacy.Settings theme-variant 'dark'
