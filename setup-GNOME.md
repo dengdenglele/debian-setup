@@ -2,7 +2,8 @@
 
 Append additional sources the sources.list file
 
-## Use "Settings" App to configure GNOME
+## Use "Settings" App to configure GNOME (deprecated, now using gsettings to set up everything, see next section)
+<!---
 
 - Mouse & Touchpad
   - Disable "Natural Scrolling"
@@ -40,7 +41,9 @@ Append additional sources the sources.list file
     - Alt+Tab < "Switch windows"
   - Custom Shortcuts
     - Ctrl+Alt+T < gnome-terminal
-   
+
+-->
+
 ## Set up GNOME settings with terminal
 
 ```bash
