@@ -101,7 +101,11 @@ sudo apt install systemd-timesyncd
 ## Add additional packages
 
 ```bash
-sudo apt install wget gpg curl ssh pip gnome-tweaks bash-completion
+# without debian "standard system utilities" all tools in this block are missing
+sudo apt install wget gpg bash-completion
+
+# with debian "standard system utilities" following tools are missing
+sudo apt install curl gnome-tweaks pip ssh vim
 ```
 
 ## Remove unnecessary packages
