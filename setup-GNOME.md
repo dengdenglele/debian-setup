@@ -60,7 +60,16 @@ gsettings set org.gnome.mutter dynamic-workspaces false
 gsettings set org.gnome.desktop.wm.preferences num-workspaces 3
 gsettings set org.gnome.desktop.interface enable-hot-corners false
 
+# Power
+gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
+gsettings set org.gnome.settings-daemon.plugins.power power-saver-profile-on-low-battery false
+gsettings set org.gnome.desktop.session idle-delay 900
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 0
+gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'nothing'
 gsettings set org.gnome.desktop.interface show-battery-percentage 'true'
+
+
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.Terminal.Legacy.Settings theme-variant 'dark'
 
