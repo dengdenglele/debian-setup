@@ -73,6 +73,8 @@ gsettings set org.gnome.desktop.interface show-battery-percentage 'true'
 gsettings set org.gnome.desktop.interface cursor-size 48
 gsettings set org.gnome.desktop.interface text-scaling-factor 1.25
 gsettings set org.gnome.desktop.interface locate-pointer true
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 15
+gsettings set org.gnome.desktop.peripherals.keyboard delay 250
 
 # Appearance
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
