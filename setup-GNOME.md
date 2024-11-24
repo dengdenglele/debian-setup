@@ -44,11 +44,22 @@ Append additional sources the sources.list file
 ## Set up GNOME settings with terminal
 
 ```bash
+# Mouse & Touchpad
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
+gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll false
+gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
+
+# Window focus
+gsettings set org.gnome.desktop.wm.preferences focus-mode 'click'
+gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
+## [Focus "mouse" or "sloppy" do the same thing on gnome-shell](https://unix.stackexchange.com/questions/49428/focus-mouse-or-sloppy-do-the-same-thing-on-gnome-shell)
+gsettings set org.gnome.desktop.wm.preferences auto-raise true
+
+
 gsettings set org.gnome.desktop.interface show-battery-percentage 'true'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.Terminal.Legacy.Settings theme-variant 'dark'
 
-gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
 
 gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Super>Tab']"
