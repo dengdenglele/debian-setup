@@ -50,8 +50,8 @@ gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll false
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
 
 # Window focus
-gsettings set org.gnome.desktop.wm.preferences focus-mode 'click'
 gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
+gsettings set org.gnome.desktop.wm.preferences focus-mode 'click'
 ## [Focus "mouse" or "sloppy" do the same thing on gnome-shell](https://unix.stackexchange.com/questions/49428/focus-mouse-or-sloppy-do-the-same-thing-on-gnome-shell)
 gsettings set org.gnome.desktop.wm.preferences auto-raise true
 
@@ -77,6 +77,7 @@ gsettings set org.gnome.desktop.interface locate-pointer true
 # Appearance
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.Terminal.Legacy.Settings theme-variant 'dark'
+gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
 
 # Keyboard
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'de')]"
@@ -84,16 +85,15 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['caps:ctrl_modifier'
 ## how to reset
 ### gsettings reset org.gnome.desktop.input-sources xkb-options
 
-
+# Shortcuts
+## Window manager
 gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Super>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Super>Tab']"
-
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"
-
-
 gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Super>d']"
 
+## Launchers
 gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys calculator "['<Super>c']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys email "['<Super>b']"
