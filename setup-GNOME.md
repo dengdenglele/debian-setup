@@ -55,6 +55,10 @@ gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
 ## [Focus "mouse" or "sloppy" do the same thing on gnome-shell](https://unix.stackexchange.com/questions/49428/focus-mouse-or-sloppy-do-the-same-thing-on-gnome-shell)
 gsettings set org.gnome.desktop.wm.preferences auto-raise true
 
+# Multitasking
+gsettings set org.gnome.mutter dynamic-workspaces false
+gsettings set org.gnome.desktop.wm.preferences num-workspaces 3
+gsettings set org.gnome.desktop.interface enable-hot-corners false
 
 gsettings set org.gnome.desktop.interface show-battery-percentage 'true'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
@@ -89,7 +93,7 @@ sudo apt install gnome-tweaks
 
 - General > Turn off "Suspend when laptop lid is closed"
 - Fonts > Increase "Scaling Factor" if necessary
-- Keyboard & Mouse > Set "Acceleration Profile" to "Flat".
+- Keyboard & Mouse > Set "Acceleration Profile" to "Flat"
 - Keyboard & Mouse > In "Additional Layout Options" > "Caps Lock behavior" select "Make Caps Lock an additional Esc, but Shift + Caps Lock is the regular Caps Lock"
 
 
