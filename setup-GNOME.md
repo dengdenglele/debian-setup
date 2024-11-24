@@ -104,6 +104,14 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys www "['<Super>f']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-down "['<Super><Alt>z']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-up "['<Super><Alt>x']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-mute "['<Super><Alt>space']"
+
+## Custom shortcut gnome-terminal
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/ name 'Terminal'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/ command 'gnome-terminal'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/ binding '<Control><Alt>t'
+
+
 ```
   
 ## gnome-tweaks
