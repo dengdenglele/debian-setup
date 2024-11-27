@@ -75,3 +75,13 @@ iface lo inet loopback
 allow-hotplug enp0s31f6
 iface enp0s31f6 inet dhcp
 ```
+
+# Manage Logitech devices on Linux
+
+Logitech Unifying Software for Windows is no longer available for download anymore.
+Solaar is an open source alternative with GUI.
+
+```bash
+sudo apt install solaar
+```
+
