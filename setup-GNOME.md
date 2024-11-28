@@ -139,6 +139,11 @@ sudo apt install gnome-tweaks
 
 ## gnome-extensions
 
+Get a list of enabled gnome extensions with gsettings
+```bash
+gsettings get org.gnome.shell enabled-extensions
+```
+
 Activate pre-installed extension "workspace indicator" from gnome-core
 ```
 gnome-extensions enable workspace-indicator@gnome-shell-extensions.gcampax.github.com
