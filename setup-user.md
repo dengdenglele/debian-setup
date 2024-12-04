@@ -5,6 +5,16 @@ Add an additional user, stick with the defaults, will not have sudo rights:
 sudo adduser username
 ```
 
+## Delete a user (including home directory)
+
+```bash
+sudo deluser username
+
+# also delete his home directory
+# hint: when the user was previously logged in, the command might fail to delete the home directory, but will not tell you it failed
+sudo deluser --remove-home username
+```
+
 ## Allow user to perform specific commands without being explicitly in sudo group or requiring password input
 
 ```bash
