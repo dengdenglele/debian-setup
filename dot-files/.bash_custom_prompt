@@ -1,0 +1,15 @@
+# custom prompt
+## deactivate it and restore original prompt by deleting or commenting out the following line
+## the following custom prompt glitches, when copying long strings into CLI
+#export PS1="\n\e[00m[ \e[01;32m\d \e[00m| \e[01;36m\t \e[00m| \e[01;34m\w \e[00m]\n\e[01;33m\$ \e[01;31m>>>\e[m "
+
+## the following one does not glitch anymore, glitch was previously caused by wrong usage of colour codes
+export PS1="\n[ \[\033[01;32m\]\d \[\033[0m\]| \[\033[01;36m\]\t \[\033[0m\]| \[\033[01;34m\]\w \[\033[0m\]]\n\[\033[01;33m\]$ \[\033[01;31m\]>>> \[\033[0m\]"
+
+# explanation here: https://www.quora.com/How-can-you-change-the-color-of-your-shell-prompt-on-Linux
+# more explanation: https://unix.stackexchange.com/questions/31695/how-to-make-the-terminal-display-usermachine-in-bold-letters
+
+### original prompt, as reference (default of debian 12 bookworm installation)
+#export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
+
+
