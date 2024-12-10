@@ -40,6 +40,11 @@ Save list of installed .deb packages in .md file
 apt list --installed > ~/installed_deb_packages.md
 ```
 
+Show all packages installed from backports repo
+```bash
+apt list --installed | grep backports
+```
+
 Remove a package AND corresponding config files with remove and --purge (config files in home directory are left untouched)
 ```bash
 sudo apt remove [package-name] --purge
