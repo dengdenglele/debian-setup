@@ -42,6 +42,8 @@ sudo apt-get update && sudo apt-get install firefox -y
 ######################################################################################################################################################################
 ######################################################################################################################################################################
 # ONLYOFFICE Desktop Editors (NOT Docs edition=online version)
+## will ask interactively for "ttf-mscorefonts-installer"
+## accept Microsoft’s End user agreement when asked
 mkdir -p -m 700 ~/.gnupg
 gpg --no-default-keyring --keyring gnupg-ring:/tmp/onlyoffice.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys CB2DE8E5
 chmod 644 /tmp/onlyoffice.gpg
@@ -49,7 +51,7 @@ sudo chown root:root /tmp/onlyoffice.gpg
 sudo mv /tmp/onlyoffice.gpg /usr/share/keyrings/onlyoffice.gpg
 echo 'deb [signed-by=/usr/share/keyrings/onlyoffice.gpg] https://download.onlyoffice.com/repo/debian squeeze main' | sudo tee -a /etc/apt/sources.list.d/onlyoffice.list
 sudo apt-get update
-sudo apt-get install onlyoffice-desktopeditors
+sudo apt-get install onlyoffice-desktopeditors -y
 ######################################################################################################################################################################
 ######################################################################################################################################################################
 ######################################################################################################################################################################
@@ -62,7 +64,7 @@ cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-key
 echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' |\
   sudo tee /etc/apt/sources.list.d/signal-xenial.list
 # 3. Update your package database and install Signal:
-sudo apt update && sudo apt install signal-desktop
+sudo apt update && sudo apt install signal-desktop -y
 ######################################################################################################################################################################
 ######################################################################################################################################################################
 ######################################################################################################################################################################
@@ -73,7 +75,7 @@ wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.g
     | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
 echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' \
     | sudo tee /etc/apt/sources.list.d/vscodium.list
-sudo apt update && sudo apt install codium
+sudo apt update && sudo apt install codium -y
 ######################################################################################################################################################################
 ######################################################################################################################################################################
 ######################################################################################################################################################################
@@ -85,7 +87,7 @@ sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packag
 rm -f packages.microsoft.gpg
 sudo apt install apt-transport-https
 sudo apt update
-sudo apt install code
+sudo apt install code -y
 ######################################################################################################################################################################
 ######################################################################################################################################################################
 ######################################################################################################################################################################
