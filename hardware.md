@@ -64,6 +64,9 @@ sudo i7z
 sudo apt install stress
 ## stress test the cpu with 8 threads (e.g. 4 pyhsical cores + 4 virtual cores)
 sudo stress --cpu 8
+
+# btop, an even nicer looking htop
+sudo apt install btop
 ```
 
 # Set battery charging thresholds for laptops
