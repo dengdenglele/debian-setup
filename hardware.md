@@ -37,6 +37,9 @@ How to activate hardware support for video playback and energy consumption reduc
 ```bash
 echo "hwdec=auto" >> ~/.config/mpv/mpv.conf
 ```
+or toggle it with shortcut: `Ctrl` + `h`
+
+show file, video and audio infos: `Shift` + `i`
 
 ## Disable unsupported modern codecs on Firefox
 Unsupported codecs running on old devices are accelerated via software / CPU only.
