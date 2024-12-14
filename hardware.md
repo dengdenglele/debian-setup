@@ -30,7 +30,15 @@ otherwise Intel CPU (8th gen?) will not get pass 800MHz when
 
 [Restoring TLP default settings - how?](https://www.reddit.com/r/linux4noobs/comments/yv1yim/restoring_tlp_default_settings_how/)
 
-# Disable unsupported modern codecs on Firefox
+# Hardware acceleration
+How to activate hardware support for video playback and energy consumption reduction
+
+## Enable hardware acceleration for mpv player
+```bash
+echo "hwdec=auto" >> ~/.config/mpv/mpv.conf
+```
+
+## Disable unsupported modern codecs on Firefox
 Unsupported codecs running on old devices are accelerated via software / CPU only.
 This can cause high energy consumption and stuttering video playback with high video resolutions.
 YouTube and other sites do not check if modern codecs are supported, so they will not fall back to older hardware-accelerated codecs.
