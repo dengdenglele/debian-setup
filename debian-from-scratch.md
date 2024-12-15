@@ -86,12 +86,15 @@ sudo rm /etc/network/interfaces
 sudo reboot
 ```
 
-## [Install systemd-resolved for network name resolution to local applications]
+## Install systemd-resolved for network name resolution to local applications
 
 ```bash
+# check resolv.conf
+cat /etc/resolv.conf
+
 sudo apt install systemd-resolved
+sudo reboot
 ```
-Reboot system afterwards to fully activate systemd-resolved
 
 ## [Fix incorrect time in Windows when using dual-boot](https://itsfoss.com/wrong-time-dual-boot/)
 
