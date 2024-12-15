@@ -26,6 +26,7 @@ flatpak list > ~/installed_flatpaks.md
 cat ~/installed_flatpaks.md  | column -t -s " "
 ```
 
+[Launch Flatpaks from your Linux terminal](https://opensource.com/article/21/5/launch-flatpaks-linux-terminal)
 
 [More on flatpak options](https://askubuntu.com/questions/1078021/how-do-i-install-a-flatpak-for-a-specific-user)
 [Flatpak documentation](https://docs.flatpak.org/en/latest/using-flatpak.html)
