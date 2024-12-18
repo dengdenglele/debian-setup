@@ -69,9 +69,12 @@ sudo stress --cpu 8
 sudo apt install btop
 ```
 
-# Set battery charging thresholds for laptops
+# Check battery health and set charging thresholds for laptops
 
 ```bash
+# Check battery health
+upower -i /org/freedesktop/UPower/devices/battery_BAT0
+
 # Print out current battery charging threshold
 cat /sys/class/power_supply/BAT0/charge_start_threshold
 cat /sys/class/power_supply/BAT0/charge_stop_threshold
