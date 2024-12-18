@@ -74,6 +74,7 @@ sudo apt install btop
 ```bash
 # Check battery health
 upower -i /org/freedesktop/UPower/devices/battery_BAT0
+sudo upower -i $(upower -e | grep 'BAT')
 
 # Print out current battery charging threshold
 cat /sys/class/power_supply/BAT0/charge_start_threshold
