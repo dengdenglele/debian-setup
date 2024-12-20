@@ -175,6 +175,10 @@ clipboard-indicator@tudmotu.com
 ddterm@amezin.github.com
 ```
 
+### gnome-extension bugs
+
+- forge and ddterm do not work well together
+
 ## [Increase width of scrollbars in GTK3 and GTK4 applications](https://www.reddit.com/r/gnome/comments/152equt/change_scrollbar_width_gnome_434_adwaita/)
 
 Create the following files in .config folder:
