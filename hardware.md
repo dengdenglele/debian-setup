@@ -41,6 +41,9 @@ or toggle it with shortcut: `Ctrl` + `h`
 
 show file, video and audio infos: `Shift` + `i`
 
+**References**
+- [mpv mit Hardware-Decoding](https://natenom.de/2023/07/mpv-mit-hardware-decoding/)
+
 ## Disable unsupported modern codecs on Firefox
 Unsupported codecs running on old devices are accelerated via software / CPU only.
 This can cause high energy consumption and stuttering video playback with high video resolutions.
