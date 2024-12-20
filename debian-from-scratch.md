@@ -96,12 +96,6 @@ sudo apt install systemd-resolved
 sudo reboot
 ```
 
-## [Fix incorrect time in Windows when using dual-boot](https://itsfoss.com/wrong-time-dual-boot/)
-
-```bash
-timedatectl set-local-rtc 1
-```
-
 ## [Fix missing time synchronization service](https://manpages.debian.org/unstable/systemd-timesyncd/systemd-timesyncd.service.8.en.html)
 
 ```bash
