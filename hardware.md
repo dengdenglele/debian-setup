@@ -6,6 +6,34 @@
 - A modest starting point is to set -50 mV for each CPU, CPU cache and iGPU
 - Still testing the stability of 8th Gen U-series CPU with CPU and CPU cache set to -100 mV and iGPU set to -50 mV
 
+```bash
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> $HOME/.bashrc
+sudo pip install undervolt --break-system-packages
+
+cat <<EOF | sudo tee /etc/systemd/system/undervolt.service
+[Unit]
+Description=undervolt
+After=suspend.target
+After=hibernate.target
+After=hybrid-sleep.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/undervolt -v --core -50 --cache -50 --gpu -50
+
+[Install]
+WantedBy=multi-user.target
+WantedBy=suspend.target
+WantedBy=hibernate.target
+WantedBy=hybrid-sleep.target
+EOF
+
+sudo systemctl start undervolt.service
+sudo systemctl enable undervolt.service
+sudo undervolt --read
+```
+
+
 # [TLP Optimizing Guide](https://linrunner.de/tlp/support/optimizing.html)
 
 ```bash
