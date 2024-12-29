@@ -47,6 +47,11 @@ Append additional sources the sources.list file
 ## Set up GNOME settings with terminal
 
 ```bash
+# How to reset any gnome settings back to default value
+gsettings reset org.gnome.desktop.input-sources xkb-options
+gsettings reset org.gnome.desktop.peripherals.touchpad natural-scroll
+gsettings reset org.gnome.desktop.interface show-battery-percentage
+
 # Mouse & Touchpad
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll false
@@ -88,8 +93,6 @@ gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,m
 # Keyboard
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'de')]"
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:ctrl_modifier']"
-## how to reset
-### gsettings reset org.gnome.desktop.input-sources xkb-options
 
 # Shortcuts
 ## Window manager
