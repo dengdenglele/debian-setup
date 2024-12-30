@@ -1,3 +1,8 @@
+# Make sure Secure Boot is disabled, as it can interfere with hardware-related settings
+```bash
+mokutil --sb-state
+```
+
 # [Undervolt Intel Core CPUs up to 9th generation](https://cryptosingh1337.medium.com/how-to-under-volt-intel-i-series-cpu-in-ubuntu-abc9283f4760)
 - [Git repository](https://github.com/georgewhewell/undervolt)
 - Requires python and pip
