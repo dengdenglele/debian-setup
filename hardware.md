@@ -41,6 +41,11 @@ sudo undervolt --read
 
 # [TLP Optimizing Guide](https://linrunner.de/tlp/support/optimizing.html)
 
+- TLP is an optional tool for power optimization with a vast amount of settings.
+- Test out if your distro is not already shipping with a good power management tool.
+  - Fedora 41 with GNOME 47 is shipping with `tuned` package.
+  - Other distros might ship with `power-profiles-daemon`.
+
 ```bash
 sudo apt install tlp
 sudo tlp start
@@ -106,7 +111,16 @@ sudo stress --cpu 8
 
 # btop, an even nicer looking htop
 sudo apt install btop
+
+# SSD health and TBW values
+sudo apt install smartmontools
+sudo smartctl -a /dev/nvme0n1
+
+sudo apt install nvme-cli
+sudo nvme smart-log /dev/nvme0n1
 ```
+
+- [How to Check the Health of SSD in Linux](https://www.baeldung.com/linux/ssd-verify-health)
 
 # Check battery health and set charging thresholds for laptops
 
