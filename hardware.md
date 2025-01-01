@@ -76,6 +76,9 @@ show file, video and audio infos: `Shift` + `i`
 
 **References**
 - [mpv mit Hardware-Decoding](https://natenom.de/2023/07/mpv-mit-hardware-decoding/)
+- [Debian Wiki: HardwareVideoAcceleration](https://wiki.debian.org/HardwareVideoAcceleration)
+- [Arch Wiki: Hardware video acceleration](https://wiki.archlinux.org/title/Hardware_video_acceleration)
+- [Fedora Wiki: Firefox Hardware acceleration](https://fedoraproject.org/wiki/Firefox_Hardware_acceleration)
 
 ## Disable unsupported modern codecs on Firefox
 Unsupported codecs running on old devices are accelerated via software / CPU only.
