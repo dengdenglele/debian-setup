@@ -162,3 +162,14 @@ Solaar is an open source alternative with GUI.
 sudo apt install solaar
 ```
 
+# Update firmware and BIOS with fwupd
+
+```bash
+sudo apt install fwupd
+fwupdmgr get-devices
+fwupdmgr refresh
+fwupdmgr get-updates
+fwupdmgr update
+```
+
+- [Arch Wiki: fwupd](https://wiki.archlinux.org/title/Fwupd)
