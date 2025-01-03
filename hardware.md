@@ -66,6 +66,27 @@ otherwise Intel CPU (8th gen?) will not get pass 800MHz when
 # Hardware acceleration
 How to activate hardware support for video playback and energy consumption reduction
 
+## Install non-free Intel media drivers for Gen 8+
+Add the following lines to `/etc/apt/sources.list`
+```bash
+deb https://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
+deb-src https://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
+
+deb https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+deb-src https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+
+deb https://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
+deb-src https://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
+```
+
+Afterwards install the non-free drivers (free will be replaced) and reboot
+```bash
+sudo apt update
+sudo apt install intel-media-va-driver-non-free
+```
+- [Debian Wiki: HardwareVideoAcceleration](https://wiki.debian.org/HardwareVideoAcceleration#VA-API)
+- [Debian Wiki: SourcesList](https://wiki.debian.org/SourcesList#Example_sources.list)
+
 ## Enable hardware acceleration for mpv player
 ```bash
 echo "hwdec=auto" >> ~/.config/mpv/mpv.conf
