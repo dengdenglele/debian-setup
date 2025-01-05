@@ -180,8 +180,15 @@ ddterm@amezin.github.com
 ```
 
 ### gnome-extension bugs
-
 - forge and ddterm do not work well together
+
+### How to reset extensions to their default values
+Use dconf Editor: Seach for extension, right click on the folder and select "Reset recursively"
+```bash
+sudo apt install dconf-editor
+```
+
+- [How do I reset a Gnome Extension's settings to default? Ex: for "Awesome Tiles" in Ubuntu 22.04?](https://askubuntu.com/questions/1446822/how-do-i-reset-a-gnome-extensions-settings-to-default-ex-for-awesome-tiles)
 
 ## [Increase width of scrollbars in GTK3 and GTK4 applications](https://www.reddit.com/r/gnome/comments/152equt/change_scrollbar_width_gnome_434_adwaita/)
 
