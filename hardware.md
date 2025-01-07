@@ -194,3 +194,11 @@ fwupdmgr update
 ```
 
 - [Arch Wiki: fwupd](https://wiki.archlinux.org/title/Fwupd)
+
+# Gather BIOS information
+
+```bash
+mokutil --sb-state
+sudo dmidecode -s system-serial-number
+sudo dmidecode | grep BIOS -A 5
+```
