@@ -193,6 +193,11 @@ fwupdmgr get-updates
 fwupdmgr update
 ```
 
+```bash
+# downgrade BIOS, SSD etc
+fwupdmgr downgrade
+```
+
 - [Arch Wiki: fwupd](https://wiki.archlinux.org/title/Fwupd)
 
 # Gather BIOS information
