@@ -143,10 +143,10 @@ sudo apt install gnome-tweaks
 
 ## gnome-extensions
 
-### [browser connector and extensions manager](https://datafidelity.com.au/getting-started-to-use-gnome-shell-extensions-on-ubuntu-24-04/)
+### [browser connector and extensions manager](https://gnome.pages.gitlab.gnome.org/gnome-browser-integration/pages/installation-guide.html)
 
 ```bash
-sudo apt-get install gnome-shell-extension-manager chrome-gnome-shell
+sudo apt-get install gnome-shell-extension-manager gnome-browser-connector
 ```
 
 ### list all gnome extensions
