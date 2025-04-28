@@ -8,14 +8,21 @@
 - [Install keyd (wayland) from source](https://github.com/rvaiya/keyd):
 
 ``` bash
+# preparations: verify headers and install gcc
+apt list --installed | grep headers
+sudo apt install build-essential
+
 # install from source
 git clone https://github.com/rvaiya/keyd
 cd keyd
-make && sudo make install
-sudo systemctl enable keyd && sudo systemctl start keyd
 
-# enable the daemon
-sudo systemctl enable keyd
+# change branch to a "release" release version for better stability
+git checkout v2.5.0 # or newer
+
+make && sudo make install
+sudo systemctl enable --now keyd
+
+# sudo systemctl enable keyd && sudo systemctl start keyd # 
 
 # create .conf file...
 sudo nano /etc/keyd/default.conf
