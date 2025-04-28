@@ -92,7 +92,7 @@ gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,m
 
 # Keyboard
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'de')]"
-gsettings set org.gnome.desktop.input-sources xkb-options "['caps:ctrl_modifier']"
+#gsettings set org.gnome.desktop.input-sources xkb-options "['caps:ctrl_modifier']" ##### be careful, do not have CAPS LOCK enabled, when triggering this command!!!
 
 # Shortcuts
 ## Window manager
