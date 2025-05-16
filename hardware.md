@@ -39,14 +39,24 @@ sudo undervolt --read
 - TLP is an optional tool for power optimization with a vast amount of settings.
 - Test out if your distro is not already shipping with a good power management tool.
   - Fedora 41 with GNOME 47 is shipping with `tuned` package.
-  - Other distros might ship with `power-profiles-daemon`.
+  - Other distros might ship with `power-profiles-daemon` (link below)
 
 ```bash
-sudo apt install tlp
+# use newest package from repo depending on distro (link below)
+# install tlp and tlp radio device wizard
+sudo apt install tlp tlp-rdw
+
+# read optimizing guide (link below)
+# and edit settings in
+sudo nano /etc/tlp.d/own-tlp.conf
+
+# apply settings
 sudo tlp start
 
-# edit settings in
-sudo nano /etc/tlp.d/own-tlp.conf
+# check tlp status
+tlp-stat -s ### tlp version
+tlp-stat --cdiff ### difference default and user configuration
+tlp-stat -c ### active configuration file and enabled parameters
 
 # reinstall tlp with default settings
 sudo apt remove tlp --purge && sudo apt install tlp
@@ -61,7 +71,11 @@ Do not disable
 otherwise Intel CPU (8th gen?) will not get pass 800MHz when 
 - "CPU_ENERGY_PERF_POLICY_ON_BAT=balance_power" is set to "balance_power"
 
-[Restoring TLP default settings - how?](https://www.reddit.com/r/linux4noobs/comments/yv1yim/restoring_tlp_default_settings_how/)
+- [Restoring TLP default settings - how?](https://www.reddit.com/r/linux4noobs/comments/yv1yim/restoring_tlp_default_settings_how/)
+- [TLP: repos and installation depending on distro](https://linrunner.de/tlp/installation/index.html)
+- [TLP: making changes](https://linrunner.de/tlp/settings/introduction.html#making-changes)
+- [TLP: optimizing guide](https://linrunner.de/tlp/support/optimizing.html)
+- [TLP: power-profiles-daemon (GNOME/KDE) vs TLP](https://linrunner.de/tlp/faq/ppd.html)
 
 # Hardware acceleration
 How to activate hardware support for video playback and energy consumption reduction
