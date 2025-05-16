@@ -46,7 +46,7 @@ sudo apt install tlp
 sudo tlp start
 
 # edit settings in
-sudo nano /etc/tlp.conf
+sudo nano /etc/tlp.d/own-tlp.conf
 
 # reinstall tlp with default settings
 sudo apt remove tlp --purge && sudo apt install tlp
