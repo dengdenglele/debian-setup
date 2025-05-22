@@ -196,5 +196,12 @@ sudo hostnamectl set-hostname newHostname
 sudo vi /etc/hosts
 ```
 
+old school approach
+```bash
+sudo vi /etc/hostname
+sudo vi /etc/hosts
+sudo systemctl restart systemd-hostnamed ### OR reboot system
+```
+
 - [How to change hostname on Debian 12/11/10 Linux](https://www.cyberciti.biz/faq/how-to-change-hostname-on-debian-10-linux/)
 - [Linux Upskill Challenge: Day 3 - Power trip!](https://linuxupskillchallenge.org/03/?h=hostname#administrative-tasks)
