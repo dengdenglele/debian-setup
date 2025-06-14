@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# R
+gpg --keyserver keyserver.ubuntu.com \
+    --recv-key '95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7'
+gpg --armor --export '95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7' | \
+    sudo tee /etc/apt/trusted.gpg.d/cran_debian_key.asc
+echo "deb http://cloud.r-project.org/bin/linux/debian bookworm-cran40/" | sudo tee /etc/apt/sources.list.d/r-cran.list > /dev/null
+sudo apt install r-base r-base-dev r-recommended # not so sure what r-recommended is good for
+######################################################################################################################################################################
+######################################################################################################################################################################
+######################################################################################################################################################################
 # Chrome
 sudo apt install wget
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
