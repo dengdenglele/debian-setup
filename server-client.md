@@ -137,7 +137,9 @@ sudo nano /etc/ssh/sshd_config.d/disable_root_login.conf
 # copy the following lines into /etc/ssh/sshd_config.d/disable_root_login.conf and save it
 ## rename disable_root_login.conf to disable pubkey authentication / enable password authentcation
 ## delete the .conf file extension is sufficient
-ChallengeResponseAuthentication no
+## ChallengeResponseAuthentication is deprecated, use KbdInteractiveAuthentication instead
+## see `man sshd_config` and search for /ChallengeResponseAuthentication
+KbdInteractiveAuthentication no
 PasswordAuthentication no
 UsePAM no
 PermitRootLogin no
@@ -158,7 +160,7 @@ ssh root@ipAdressOfServer
 ssh userNameOnServer@ipAdressOfServer -o PubkeyAuthentication=no
 
 # verify all settings at once on ssh server
-sudo sshd -T | grep -E -i 'ChallengeResponseAuthentication|PasswordAuthentication|UsePAM|PermitRootLogin'
+sudo sshd -T | grep -E -i 'KbdInteractiveAuthentication|PasswordAuthentication|UsePAM|PermitRootLogin'
 ```
 
 - [A note about troubleshooting issues](https://www.cyberciti.biz/faq/how-to-disable-ssh-password-login-on-linux/)
