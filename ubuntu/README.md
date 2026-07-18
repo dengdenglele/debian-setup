@@ -22,7 +22,17 @@ sudo apt remove gnome-characters yelp -y
 
 ## Enable AV1 support on YouTube with supported Intel GPUs
 ```bash
+# Install drivers
 sudo apt install intel-media-va-driver-non-free
+
+# Install vainfo - display information form VA API driver
+sudo apt install vainfo
+
+# Install intel gpu tools
+sudo apt install intel-gpu-tools
+
+# Display a top-like summary of Intel GPU usage
+sudo intel_gpu_top
 ```
 
 ## 20 years of Ubuntu
